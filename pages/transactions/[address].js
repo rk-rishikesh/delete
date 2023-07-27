@@ -11,7 +11,7 @@ export async function getServerSideProps({ params }) {
   var res;
   if (flag) {
     res = await fetch(
-      `https://cricpass-26cw-gficfzl94-rk-rishikesh.vercel.app/api/transaction/${params.address}`
+      `https://cricpass-26cw.vercel.app/api/transaction/${params.address}`
     );
     res = await res.json();
   } else {

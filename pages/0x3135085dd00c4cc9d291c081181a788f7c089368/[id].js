@@ -343,7 +343,7 @@ export async function getServerSideProps({ params }) {
     // console.log(response);
 
     const res = await fetch(
-      `https://cricpass-26cw-gficfzl94-rk-rishikesh.vercel.app/api/transfer/jbga/${params.id}`
+      `https://cricpass-26cw.vercel.app/api/transfer/jbga/${params.id}`
     );
     const trans = await res.json();
 

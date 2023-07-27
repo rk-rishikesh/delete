@@ -10,7 +10,7 @@ import MainImage from '../public/cric.png'
 export async function getServerSideProps() {
   try {
     await clientPromise;
-    const res = await fetch("https://cricpass-26cw-gficfzl94-rk-rishikesh.vercel.app/api/event");
+    const res = await fetch("https://cricpass-26cw.vercel.app/api/event");
     const data = await res.json();
 
     // console.log(data);

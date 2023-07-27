@@ -147,7 +147,7 @@ function marketplace({ price }) {
 export default marketplace;
 
 export async function getServerSideProps() {
-  var data = await fetch("https://cricpass-26cw-gficfzl94-rk-rishikesh.vercel.app/api/price");
+  var data = await fetch("https://cricpass-26cw.vercel.app/api/price");
   data = await data.json();
 
   // console.log(data);
