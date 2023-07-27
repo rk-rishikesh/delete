@@ -292,7 +292,7 @@ export function BuyPrimary({ contract, price }) {
 }
 
 export async function getServerSideProps() {
-  var data = await fetch("http://localhost:3000/api/price");
+  var data = await fetch("https://cricpass-26cw-gficfzl94-rk-rishikesh.vercel.app/api/price");
   data = await data.json();
 
   // console.log(data);

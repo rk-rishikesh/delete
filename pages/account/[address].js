@@ -109,12 +109,12 @@ export async function getServerSideProps({ params }) {
   var res, trans;
   if (flag) {
     res = await fetch(
-      `http://localhost:3000/api/account/${params.address}`
+      `https://cricpass-26cw-gficfzl94-rk-rishikesh.vercel.app/api/account/${params.address}`
     );
     res = await res.json();
 
     trans = await fetch(
-      `http://localhost:3000/api/transaction/${params.address}`
+      `https://cricpass-26cw-gficfzl94-rk-rishikesh.vercel.app/api/transaction/${params.address}`
     );
     trans = await trans.json();
   } else {
