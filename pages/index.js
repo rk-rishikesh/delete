@@ -10,8 +10,8 @@ import MainImage from '../public/cric.png'
 export async function getServerSideProps() {
   try {
     await clientPromise;
-    const res = await fetch("http://localhost:3000/api/event");
-    const data = await res.json();
+    // const res = await fetch("http://localhost:3000/api/event");
+    const data = [];
 
     // console.log(data);
 
