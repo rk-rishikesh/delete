@@ -8,13 +8,12 @@ import EventList from "../components/EventList";
 import MainImage from '../public/cric.png'
 
 export async function getServerSideProps() {
-  
   try {
     await clientPromise;
-    // const res = await fetch("http://localhost:3000/api/event");
-    const data = [{"_id":"64c12ce01ddd7a32072f106f","name":"INDIA Vs NEWZEALAND","event":"ICC Men's Cricket World Cup 2023","date":"2023-10-22T12:00:00.000Z","venue":"Himachal Pradesh Cricket Association Stadium, Dharamsala","time":"02:00PM","match":"Match 21","ticket":[{"type":"General Admission (GA)","price":0.01,"amount":50000},{"type":"VIP","price":0.1,"amount":20}],"id":4,"description":"SUNDAY 22 OCTOBER 2023 - HIMACHAL PRADESH CRICKET ASSOCIATION STADIUM, DHARAMSALA, INDIA","slug":"indvsnz","tnc":["Limited to 5 tickets per customer","Children under the age of 14 must be accompanied by a parent/legal guardian at all times and have purchased a valid ticket.","Available to fully vaccinated individuals only."]}];
+    const res = await fetch("https://cricpass-26cw-gficfzl94-rk-rishikesh.vercel.app/api/event");
+    const data = await res.json();
 
-    console.log(data);
+    // console.log(data);
 
     return {
       props: { isDbConnected: true, data: data },
